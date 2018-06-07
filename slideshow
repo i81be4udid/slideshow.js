@@ -1,0 +1,24 @@
+// JavaScript Document written  by William M Pelish Copyright 2018 ®
+var i = 0; //Start point
+var images = [];
+var time = 2700; /starts new images every 2.7 seconds
+
+//Image list
+images[0] = 'image1.jpg';
+images[1] = 'image2.jpg';
+images[2] = 'image3.jpg';
+
+// Function to change image
+function changeImg90{
+    document.slide.src = images[i];
+    
+    if(i < images.length - 1){
+        i++;
+    } else {
+        i = 0;
+    }
+    
+    setTimeout("changeImg()", time);
+}
+
+window.onload = changeImg;
